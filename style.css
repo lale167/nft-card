@@ -36,7 +36,6 @@ img {
 .container {
     width: 350px;
     height: 600px;
-    background-color: aquamarine;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -52,12 +51,41 @@ img {
 .main-img {
     max-width: 100%;
     border-radius: 8px;
+    transition: 0.1s ease-in;
+}
+
+.image-overlay:hover {
+    opacity: 1;
+}
+
+.image-overlay {
+    border-radius: 8px;
+    background-color: hsla(178, 100%, 50%,0.5);
+    height: 302px;
+    width: 302px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.eye {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .title  {
     color: var(--white);
     font-size: 1.5rem;
     margin-top: 0.75rem;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.title:hover {
+    color: var(--cyan);
 }
 
 .p  {
@@ -82,7 +110,7 @@ img {
 .eth {
     color: var(--cyan);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .days-left {
@@ -125,9 +153,16 @@ hr {
 
 .creation span {
     color: var(--white);
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.creation span:hover {
+    color: var(--cyan);
 }
 
 /* FOOTER */
+
 .attribution {
     font-size: 14px;
     text-align: center;
